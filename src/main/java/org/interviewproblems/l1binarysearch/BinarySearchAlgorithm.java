@@ -1,6 +1,8 @@
 package org.interviewproblems.l1binarysearch;
 
-
+/**
+ * Theory: a solid implementation of the binary search algorithm.
+ */
 public class BinarySearchAlgorithm {
 
    // invariant: input[lo] < nr <= input[hi]

@@ -1,5 +1,10 @@
 package org.interviewproblems.l1binarysearch;
 
+/**
+ * An array is bitonic if it is comprised of an increasing sequence of integers followed immediately by a decreasing
+ * sequence of integers. Write a program that, given a bitonic array of N distinct int values, determines whether a
+ * given integer is in the array.
+ */
 public class P8BitonicArray {
 
    public boolean searchBitonicArray(int in[], int k) {

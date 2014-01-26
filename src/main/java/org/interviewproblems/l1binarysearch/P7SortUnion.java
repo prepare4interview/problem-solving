@@ -1,6 +1,8 @@
 package org.interviewproblems.l1binarysearch;
 
-//Given two sorted arrays of length n and m, find out the kth element of their sorted union
+/**
+ * Given two sorted arrays of length n and m, find out the kth element of their sorted union
+ */
 public class P7SortUnion {
 
    public int findK(int[] first, int[] second, int k) {
