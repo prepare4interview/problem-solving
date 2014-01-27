@@ -9,7 +9,16 @@ package org.interviewproblems.l1binarysearch;
 public class P1CountOccurrences {
 
    public int countOccurrences(int[] in, int nr) {
-      //invariant: in[lo] < nr <= in[hi]
+      int left = leftmostOccurrence(in, nr);
+      if (left == -1) return 0;
+      int right = rightmostOccurrence(in, nr);
+      return right - left + 1;
+   }
+
+   /**
+    * invariant in[lo]< nr<= hi[lo].
+    */
+   private int leftmostOccurrence(int in[], int nr) {
       int lo = -1, hi = in.length, mid;
       while (hi - lo > 1) {
          mid = lo + (hi - lo) / 2;
@@ -20,12 +29,27 @@ public class P1CountOccurrences {
          }
       }
       if (hi == in.length || in[hi] != nr) {
-         return 0;
+         return -1;
       }
-      int result = 1;
-      while (++hi < in.length && in[hi] == nr) {
-         result++;
+      return hi;
+   }
+
+   /**
+    * invariant in[lo]<=nr<hi[lo].
+    */
+   private int rightmostOccurrence(int in[], int nr) {
+      int lo = -1, hi = in.length, mid;
+      while (hi - lo > 1) {
+         mid = lo + (hi - lo) / 2;
+         if (in[mid] > nr) {
+            hi = mid;
+         } else {
+            lo = mid;
+         }
       }
-      return result;
+      if (lo == -1 || in[lo] != nr) {
+         return -1;
+      }
+      return lo;
    }
 }
