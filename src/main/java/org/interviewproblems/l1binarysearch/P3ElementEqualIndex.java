@@ -2,7 +2,6 @@ package org.interviewproblems.l1binarysearch;
 
 /**
  * Problem: Given A a sorted array, find out an i such that A[i] == i
- *
  */
 public class P3ElementEqualIndex {
 
@@ -10,8 +9,15 @@ public class P3ElementEqualIndex {
       return find(in, 0, in.length - 1);
    }
 
-   // O(n) - search (sublinear)
-   // O(1) space
+   /**
+    * O(n) - search (sublinear). O(n) is given by the fact that the array is not strictly monotonical,
+    * e.g. considering {1,1,1,1,6,6,6}, after looking at the element in the middle, both two resulting
+    * sub-arrays can contain an match and should be investigated: {1,1,1} & {1,6,6,6}.
+    *
+    * I guess we can narrow it down to O(log(n)) if the array is strictly monotonical.
+    *
+    * O(1) - space complexity
+    */
    public int find2(int[] in) {
       int lo = 0, hi = in.length - 1;
       while (lo <= hi) {
