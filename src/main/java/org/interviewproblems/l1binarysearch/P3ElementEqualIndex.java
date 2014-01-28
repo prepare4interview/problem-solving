@@ -9,6 +9,28 @@ public class P3ElementEqualIndex {
       return find(in, 0, in.length - 1);
    }
 
+
+   /**
+    * If the array is strictly monotonic then the problem can be solved in log(n) time.
+    */
+   public int findStrictMonotonic(int[] in) {
+      int lo = -1, hi = in.length;
+      //invariant: in[lo] < lo
+      while (hi - lo > 1) {
+         int mid = (hi + lo) / 2;
+         if (in[mid] < mid) {
+            lo = mid;
+         } else {
+            hi = mid;
+         }
+      }
+      if (hi < in.length && in[hi] == hi) {
+         return hi;
+      }
+      return -1;
+   }
+
+
    /**
     * O(n) - search (sublinear). O(n) is given by the fact that the array is not strictly monotonical,
     * e.g. considering {1,1,1,1,6,6,6}, after looking at the element in the middle, both two resulting
