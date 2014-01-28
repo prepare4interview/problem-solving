@@ -19,6 +19,8 @@ public class P2CubicRoot {
          lo = nr; hi = 1; result = 0;
       }
       int loopCount = 0;
+      //complexity: (hi - r) / 2^p = Eps [r, real value, p is the number of iterations, Eps is the approximation]
+      // complexity = 2^p = (hi - r) / Eps <=> p = log2((hi-r) /Eps)
       while (!((result * result * result >= nr - epsilon) && (result * result * result) <= nr + epsilon)) {
          loopCount++;
          float mid = (lo + hi) / 2;
