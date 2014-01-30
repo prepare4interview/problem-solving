@@ -5,21 +5,26 @@ package org.interviewproblems.l1binarysearch;
  */
 public class P4Log2 {
 
-
-   /**
-    * Post: log2(nr) - 10^(-precision) < result < log2(nr) + 10^(-precision)
-    */
-   public float log(float nr, int precision) {
-      float epsilon = (float) Math.pow(10, -precision);
-      float lo,hi;
-      if (nr >= 2) {
-         lo = 2; hi = nr;
-      } else {
-         lo = 0; hi = 2;
+   public float logBase2(float x) {
+      float pow = 1;
+      float aprox = 2;
+      while (aprox * aprox <= x) {
+         aprox *= aprox;
+         pow *= 2;
       }
-      float result = (lo + hi) / 2;
-//      while ()
-      //how to calculate 2^(floating number) using just allowed operation
-      return -1;
+
+      float convergeToX = 1;
+      float y = 0;
+      while (pow > 1E-10) {
+         //convergeToX is 2^p, and we refine p =: pow + pow/i + .. + pow/j
+         if (convergeToX * aprox <= x) {
+            convergeToX *= aprox;
+            y += pow;
+         }
+         aprox = (float) Math.sqrt(aprox); // invariant: aprox = 2^pow
+         pow /= 2;
+      }
+
+      return y;
    }
 }
