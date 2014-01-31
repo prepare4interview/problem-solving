@@ -1,0 +1,52 @@
+6.19 see P1ArraySearch
+6.20 - hmm
+
+6.21 -
+Nr = ((sum (i=0->N-1) |S[i]|) + 1)
+Nr is not in the set.
+
+Assuming a decision is made on a subset of S, i.e. P. We can find an S[i] which is not part of P, so that S[i]
+equals that decision.
+
+ 6.22
+ a. We sort the set using merge sort (worst case = log(n)) => n log(n) operations. Let's call this P.
+
+ boolean find(S,x) {
+    P = mergeSort(S);
+    for (e : S) {
+      r = x - e;
+      count = count(P,r); //logN
+      if (r != e && count >= 1)
+         return true;
+      if (r == e && count > 1)
+         return true;
+    }
+    return false;
+ }
+
+ runtime = n log(n) (both for merge sort and loop)
+
+ b. see P2SumSearchInOrderedSet
+
+ 6.23
+ - see P623SumBetweenTwoArrays
+
+ 6.24
+ - assuming m << n (m substantially smaller than n)
+
+ boolean disjoint(M, N)
+   mergeSort(M);
+   for (e : N)
+      if (find(M,e)) return false;
+   return true;
+
+ execution time: m*log(m) + n*log(m) ~= n*log(m)
+
+ Using an HashTable, is also an alternative: merge all M in a HashTable (O(N) average O(N^2) worst),
+ and lookup elements of M in that table. Average case: O(m+n), worst case (O(m*n)).
+
+
+ 6.25
+Use a BST for holding the result of the reunion.
+
+ 6.26
