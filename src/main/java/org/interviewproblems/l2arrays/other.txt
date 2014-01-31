@@ -1,3 +1,5 @@
+Problems are from: "Introduction to Algorithms: A Creative Approach", by Udi Manber
+
 6.19 see P1ArraySearch
 6.20 - hmm
 
