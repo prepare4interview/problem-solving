@@ -8,6 +8,7 @@ Nr is not in the set.
 Assuming a decision is made on a subset of S, i.e. P. We can find an S[i] which is not part of P, so that S[i]
 equals that decision.
 
+
  6.22
  a. We sort the set using merge sort (worst case = log(n)) => n log(n) operations. Let's call this P.
 
