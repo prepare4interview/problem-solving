@@ -1,4 +1,4 @@
-package org.interviewproblems.l2creative;
+package org.interviewproblems.l2arrays;
 
 /**
  * Given an ordered S of real numbers and a real number x. Design an algorithm that will find two elements of S which
@@ -32,5 +32,20 @@ public class P622bSumSearchInOrderedSet {
             return new int[]{inIt, second};
          }
       }
+   }
+
+   public int[] find2(double[] in, double sum) {
+      int lo = 0, hi = in.length - 1;
+      while (lo < hi) {
+         while (in[lo] + in[hi] > sum) {
+            hi--;
+            if (hi == lo)
+               return null;
+         }
+         if (in[lo] + in[hi] == sum)
+            return new int[]{lo, hi};
+         lo++;
+      }
+      return null;
    }
 }

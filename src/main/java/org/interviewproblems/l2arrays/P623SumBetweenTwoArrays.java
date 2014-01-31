@@ -1,4 +1,4 @@
-package org.interviewproblems.l2creative;
+package org.interviewproblems.l2arrays;
 
 /**
  * Given two sets S1 and S2, and a real number x, find whether there exists an element from S1 and an element from S2,

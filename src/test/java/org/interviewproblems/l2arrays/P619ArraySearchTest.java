@@ -1,4 +1,4 @@
-package org.interviewproblems.l2creative;
+package org.interviewproblems.l2arrays;
 
 import org.testng.annotations.Test;
 

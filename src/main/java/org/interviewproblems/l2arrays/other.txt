@@ -51,3 +51,10 @@ equals that decision.
 Use a BST for holding the result of the reunion.
 
  6.26
+
+Next:
+P622b - reimplement
+P625  - implement
+P629  - implement
+
+http://oj.leetcode.com/problems/

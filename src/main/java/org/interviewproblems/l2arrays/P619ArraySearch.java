@@ -1,4 +1,4 @@
-package org.interviewproblems.l2creative;
+package org.interviewproblems.l2arrays;
 
 /**
  * Given an array of integers A[0..n] such that for all i, 0 <= i < n - 1 we have |A[i]-A[i+1]| <= 1. Let A[0] = x and
