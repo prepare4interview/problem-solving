@@ -1,6 +1,7 @@
 package org.interviewproblems.l4recurssion;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -11,6 +12,7 @@ public class UniquePermutations {
       long start = System.currentTimeMillis();
       List<Integer> numList = new ArrayList<Integer>();
       for (int i : num) numList.add(i);
+      Collections.sort(numList);
       Set<ArrayList<Integer>> result = new HashSet<ArrayList<Integer>>();
       _permuteUnique(numList, result, num.length);
       try {
@@ -32,16 +34,14 @@ public class UniquePermutations {
          return result;
       }
       Set<List<Integer>> submitted = new HashSet<List<Integer>>();
-
       for (int i = 0; i < num.size(); i++) {
          List<Integer> copy = new ArrayList<Integer>(num);
          Integer base = copy.remove(i);
-         ArrayList<ArrayList<Integer>> partial = _permuteUnique(copy, solutions, solSize);
          if (submitted.contains(copy)) {
             continue;
          }
          submitted.add(copy);
-
+         ArrayList<ArrayList<Integer>> partial = _permuteUnique(copy, solutions, solSize);
          for (ArrayList<Integer> p : partial) {
             p.add(0, base);
             if (p.size() == solSize) {
