@@ -43,4 +43,44 @@ public class P5FindMinSubsequence {
       }
       return result;
    }
+
+
+   static class PosValueCombo {
+      final int pos, value;
+
+      PosValueCombo(int pos, int value) {
+         this.pos = pos;
+         this.value = value;
+      }
+   }
+
+   /**
+    * This runs in O(n).
+    */
+   public int[] minSequenceBest(int[] in, int k) {
+      Deque<PosValueCombo> deque = new LinkedList<PosValueCombo>();
+      int[] result = new int[in.length - k + 1];
+
+      for (int i = 0; i < k; i++) {
+         add(deque, new PosValueCombo(i, in[i]));
+      }
+      result[0] = deque.peekFirst().value;
+
+      for (int i = k; i < in.length; i++) {
+         PosValueCombo smallest = deque.peekFirst();
+         if (smallest.pos == i - k)
+            deque.removeFirst();
+         add(deque, new PosValueCombo(i, in[i]));
+         result[i - k + 1] = deque.peekFirst().value;
+      }
+
+      return result;
+   }
+
+   private void add(Deque<PosValueCombo> deque, PosValueCombo pv) {
+      while (!deque.isEmpty() && deque.peekLast().value > pv.value) {
+         deque.removeLast();
+      }
+      deque.addLast(pv);
+   }
 }

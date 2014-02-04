@@ -28,4 +28,13 @@ public class P5FindMinSubsequenceTest {
       System.out.println("               expected = " + Arrays.toString(expected));
       assertTrue(Arrays.equals(result, expected));
    }
+
+   public void simpleTest3() {
+      int[] in = new int[]{1, 2, 3, 1, 4, 0, 6, -1, 4, 2, -2, -3, 3, 4, 5, 6, 7};
+      int[] result = problem.minSequenceBest(in, 5);
+      int[] expected = new int[]{1, 0, 0, -1, -1, -1, -2, -3, -3, -3, -3, -3, 3};
+      System.out.println("Arrays.toString(result) = " + Arrays.toString(result));
+      System.out.println("               expected = " + Arrays.toString(expected));
+      assertTrue(Arrays.equals(result, expected));
+   }
 }
