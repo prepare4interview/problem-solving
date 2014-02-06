@@ -1,39 +1,35 @@
 package org.interviewproblems.l4recurssion;
 
-public class RegExp {
-   public boolean isMatch(String s, String p) {
-      if (s.length() == 0) {
-         for (int i = 0; i < p.length(); i++) {
-            if (p.charAt(i) != '*') return false;
-         }
-         return true;
-      }
-      if (p.length() == 0) return false;
-      Character c = p.charAt(0);
-      switch (c) {
-         case '?' : {
-            return isMatch(s.substring(1), p.substring(1));
-         }
-         case '*' : {
-            int actualStart = -1;
-            while (p.length() > actualStart + 1 && p.charAt(actualStart + 1) == '*') {
-               actualStart ++;
-            }
-            for (int j = s.length(); j >= 0; j--) {
-               if (isMatch(s.substring(j), p.substring(actualStart+1))) return true;
-            }
-            return false;         }
-         default: {
-            if (c != s.charAt(0)) return false;
-            return isMatch(s.substring(1), p.substring(1));
-         }
 
-      }
+//http://oj.leetcode.com/problems/regular-expression-matching/
+public class RegExp {
+
+   public boolean isMatch(String s, String p) {
+      return _isMatch(s, 0, p, 0);
    }
 
-   public static void main(String[] args) {
-      boolean c = new RegExp().isMatch("abbaabbbbababaababababbabbbaaaabbbbaaabbbabaabbbbbabbbbabbabbaaabaaaabbbbbbaaabbabbbbababbbaaabbabbabb", "***b**a*a*b***b*a*b*bbb**baa*bba**b**bb***b*a*aab*a**");
-      System.out.println("c = " + c);
-      assert c;
+   private boolean _isMatch(String s, int is, String p, int ip) {
+
+      if (p.length() == ip) return s.length() == is;
+
+      if (nextIsStar(p, ip)) return _isMatch(s, is, p, ip + 1);
+
+      if (p.charAt(ip) == '.') {
+         return _isMatch(s, is + 1, p, ip + 1);
+      }
+
+      if (p.charAt(ip) == '*') {
+         char prev = p.charAt(ip - 1);
+         boolean a = _isMatch(s, is, p, ip + 1);
+         boolean b = s.length() > is && (s.charAt(is) == prev || prev == '.') && _isMatch(s, is + 1, p, ip);
+         return a || b;
+      }
+
+      //this is a literal
+      return is < s.length() && s.charAt(is) == p.charAt(ip) && _isMatch(s, is + 1, p, ip + 1);
+   }
+
+   private boolean nextIsStar(String p, int ip) {
+      return ip + 1 < p.length() && p.charAt(ip + 1) == '*';
    }
 }
