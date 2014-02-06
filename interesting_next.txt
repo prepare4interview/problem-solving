@@ -1,8 +1,5 @@
 - decision trees
 
-http://oj.leetcode.com/problems/n-queens/
-http://oj.leetcode.com/problems/permutations/
-http://oj.leetcode.com/problems/permutations-ii/
-http://oj.leetcode.com/problems/combination-sum/
-http://oj.leetcode.com/problems/sudoku-solver/
-http://oj.leetcode.com/problems/wildcard-matching/
+Dynamic programming problems:
+- minimum edit distance
+- longest common subsequence of two array

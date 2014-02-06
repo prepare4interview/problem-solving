@@ -1,6 +1,9 @@
 package org.interviewproblems.l4recurssion;
 
 
+import java.util.HashSet;
+import java.util.Set;
+
 //http://oj.leetcode.com/problems/regular-expression-matching/
 public class RegExp {
 
@@ -31,5 +34,15 @@ public class RegExp {
 
    private boolean nextIsStar(String p, int ip) {
       return ip + 1 < p.length() && p.charAt(ip + 1) == '*';
+   }
+
+   Set<String> notMatching = new HashSet<String>();
+
+   private boolean _isMatchCache(String s, int is, String p, int ip) {
+      String key = s.substring(is) + "___" + p.substring(ip);
+      if (notMatching.contains(key)) return false;
+      boolean result = _isMatch(s, is, p, ip);
+      if (!result) notMatching.add(key);
+      return result;
    }
 }
