@@ -3,3 +3,24 @@
 Dynamic programming problems:
 - minimum edit distance
 - longest common subsequence of two array
+
+
+http://oj.leetcode.com/problems/two-sum/
+http://oj.leetcode.com/problems/median-of-two-sorted-arrays/
+http://oj.leetcode.com/problems/3sum/
+http://oj.leetcode.com/problems/4sum/
+astea 2
+cre ca le-am mai povestit
+http://oj.leetcode.com/problems/remove-duplicates-from-sorted-array/
+mai simpluta
+da mere bagata
+http://oj.leetcode.com/problems/minimum-path-sum/
+ii de programare dinamica
+http://oj.leetcode.com/problems/simplify-path/
+asta cre ca ai mai vazut-o :)
+http://oj.leetcode.com/problems/edit-distance/
+programare dinamica clasica
+http://oj.leetcode.com/problems/flatten-binary-tree-to-linked-list/
+asta am vazut-o frecvent
+http://oj.leetcode.com/problems/lru-cache/
+asta am primit-o la interviu
