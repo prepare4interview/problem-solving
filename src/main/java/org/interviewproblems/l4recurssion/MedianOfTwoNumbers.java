@@ -1,6 +1,6 @@
 package org.interviewproblems.l4recurssion;
 
-//http://oj.leetcode.com/problems/median-of-two-sorted-arrays/
+//http://oj.leetcode.com/problems/median-of-two-sorted-arrays
 public class MedianOfTwoNumbers {
 
    public double findMedianSortedArrays(int A[], int B[]) {
