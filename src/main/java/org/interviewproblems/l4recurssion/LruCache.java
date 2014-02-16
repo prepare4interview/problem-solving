@@ -88,5 +88,7 @@ public class LruCache {
       assert 2 == lruCache.get(2);
       assert 3 == lruCache.get(3);
       assert -1 == lruCache.get(4);
+
+      "43+2".matches("-|/|\\*|\\+");
    }
 }
