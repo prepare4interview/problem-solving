@@ -1,4 +1,4 @@
-package org.interviewproblems.trainingweek.mon;
+package org.interviewproblems.common;
 
 public class TreeNode {
    public int val;

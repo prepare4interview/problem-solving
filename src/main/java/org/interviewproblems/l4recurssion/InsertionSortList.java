@@ -1,19 +1,11 @@
 package org.interviewproblems.l4recurssion;
 
+import org.interviewproblems.common.ListNode;
+
 import java.util.Deque;
 import java.util.LinkedList;
 
 public class InsertionSortList {
-
-   static public class ListNode {
-      int val;
-      ListNode next;
-
-      ListNode(int x, ListNode next) {
-         val = x;
-         this.next = next;
-      }
-   }
 
    public ListNode insertionSortList(ListNode head) {
       Deque<ListNode> stack = new LinkedList<ListNode>();
