@@ -8,4 +8,12 @@ public class ListNode {
       val = x;
       this.next = next;
    }
+
+   @Override
+   public String toString() {
+      return "ListNode{" +
+            "val=" + val +
+            ", next=" + System.identityHashCode(next) +
+            '}';
+   }
 }
