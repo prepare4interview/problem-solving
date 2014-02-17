@@ -7,6 +7,7 @@ import java.util.HashSet;
 //http://oj.leetcode.com/problems/linked-list-cycle-ii/
 public class DetectCycleInList {
 
+   //also a very nice solution here: http://oj.leetcode.com/discuss/396/is-there-any-better-answer-for-the-linked-list-cycle-ii
    public ListNode detectCycleNoSpace(ListNode head) {
       while (head != null) {
          ListNode oneStep = head.next;
