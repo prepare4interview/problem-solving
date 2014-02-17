@@ -65,8 +65,7 @@ public class DetectCycleInList {
       ListNode head = new ListNode(items[0], null);
       ListNode prev = head;
       for (int i = 1; i < items.length; i++) {
-         ListNode current = new ListNode(items[1], null);
-         prev.next = current;
+         prev.next = new ListNode(items[1], null);
          prev = prev.next;
       }
 
