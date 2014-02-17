@@ -13,3 +13,38 @@ http://oj.leetcode.com/problems/minimum-path-sum
 http://stackoverflow.com/questions/6184869/what-is-difference-between-memoization-and-dynamic-programming
 http://www.infoarena.ro/blog/meet-in-the-middle
  - first two problems
+
+
+results = [{1}]
+i = 2;
+while (i < n) {
+  for (r : results) {
+    newResults.add(insert(i,r));
+  }
+  results = newResults;
+  i++;
+}
+
+
+void rec(int level, int[] sol) {
+   for (int i = 0; i < n; i++) {
+      sol[level] = i;
+      rec(level + 1, sol);
+   }
+}
+
+void iter() {
+  for (int level = 0; level < n; level++)
+      stack.push(0);
+  while (!stack.isEmpty()) {
+      if (stack.size() == n)
+         checkSolution(stack);
+      int head = stack.pop();
+      if (head < n-1) {
+        stack.push(head+1));
+        if (stack.size() < n) {
+           stack.push(0);
+        }
+      }
+  }
+}
