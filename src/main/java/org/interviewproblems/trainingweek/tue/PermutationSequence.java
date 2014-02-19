@@ -11,12 +11,12 @@ public class PermutationSequence {
       // int[] perms = new int[n];
       ArrayList<Integer> elements = new ArrayList<Integer>();
       for (int i = 1; i <= n; i++) elements.add(i);
-      getPermutation2(n, k, elements);
+      getPermutation2(k, elements);
       return result;
    }
 
    String result = "";
-   public void getPermutation2(int n, int k, List<Integer> remaining) {
+   public void getPermutation2(int k, List<Integer> remaining) {
       if (remaining.size() == 1) {
          result += remaining.remove(0);
          return;
@@ -25,7 +25,7 @@ public class PermutationSequence {
       for (int i = 1; i < remaining.size(); i++) window *= i;
       int pos = (k-1) / window;
       result += remaining.remove(pos);
-      getPermutation2(n-1, k - window, remaining);
+      getPermutation2(k - window * pos, remaining);
    }
 
    int count = 0;
