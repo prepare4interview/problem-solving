@@ -114,6 +114,14 @@ public class BinarySearchIterator {
    }
 
    public static void main(String[] args) {
+
+      //          9
+      //       /    \
+      //      5      10
+      //    /  |
+      //   4   7
+      //      / \
+      //     6  8
       Node n4 = new Node(4, null, null);
       Node n6 = new Node(6, null, null);
       Node n8 = new Node(8, null, null);
