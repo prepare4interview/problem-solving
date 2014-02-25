@@ -1,9 +1,7 @@
 package org.interviewproblems.mocks.m1;
 
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
@@ -13,6 +11,9 @@ import java.util.Set;
  */
 public class Pb2Subset {
 
+   /**
+    * Complexity: 2^N (exponential)
+    */
    static Set<Integer> subset(int[] in, int index, int s) {
       if (s == 0) return new HashSet<Integer>();
       if (index == in.length - 1) {
@@ -50,7 +51,10 @@ public class Pb2Subset {
       }
    }
 
-   //got the idea from here: http://www.geeksforgeeks.org/dynamic-programming-subset-sum-problem/
+   /**
+    * Complexity: O(n*m) - same for spacial complexity
+    * http://www.geeksforgeeks.org/dynamic-programming-subset-sum-problem/
+    */
    public static Set<Integer> subsetDynamic(int in[], int s) {
       Pair[][] result = new Pair[s + 1][in.length + 1];
       for (int i = 0; i <= in.length; i++) result[0][i] = new Pair(-1, -1, 0);
