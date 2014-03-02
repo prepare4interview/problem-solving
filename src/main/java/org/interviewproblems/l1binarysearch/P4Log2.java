@@ -5,7 +5,7 @@ package org.interviewproblems.l1binarysearch;
  */
 public class P4Log2 {
 
-   public float logBase2(float x) {
+   public static float logBase2(float x) {
       float pow = 1;
       float aprox = 2;
       while (aprox * aprox <= x) {
@@ -26,5 +26,10 @@ public class P4Log2 {
       }
 
       return y;
+   }
+
+
+   public static void main(String[] args) {
+      System.out.println(logBase2(0.4f));
    }
 }

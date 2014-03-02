@@ -12,7 +12,7 @@ http://oj.leetcode.com/problems/minimum-path-sum
 
 http://stackoverflow.com/questions/6184869/what-is-difference-between-memoization-and-dynamic-programming
 http://www.infoarena.ro/blog/meet-in-the-middle
- - first two problems
+http://en.wikipedia.org/wiki/Knapsack_problem
 
 TODO:
 minimum cost spanning tree
