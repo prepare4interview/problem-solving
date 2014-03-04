@@ -1,4 +1,4 @@
-package org.interviewproblems.play;
+package org.interviewproblems.leetcode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

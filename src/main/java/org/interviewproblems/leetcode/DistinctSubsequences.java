@@ -1,4 +1,4 @@
-package org.interviewproblems.play;
+package org.interviewproblems.leetcode;
 
 //http://oj.leetcode.com/problems/distinct-subsequences/
 public class DistinctSubsequences {

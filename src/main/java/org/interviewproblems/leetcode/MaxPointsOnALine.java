@@ -1,4 +1,4 @@
-package org.interviewproblems.cracking;
+package org.interviewproblems.leetcode;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -54,11 +54,6 @@ public class MaxPointsOnALine {
 
          if (supA == 0) subA = 1;
          if (supB == 0) subB = 1;
-      }
-
-      int count() {
-         if (supA != supB || subA != subB) return 1;
-         return 2;
       }
 
       int gcd(int a, int b) {
