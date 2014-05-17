@@ -18,7 +18,7 @@ public class BinarySearchIterator {
 
       @Override
       public String toString() {
-         return "Node{" +
+         return "Trie{" +
                "val=" + val +
                '}';
       }

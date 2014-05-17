@@ -44,23 +44,23 @@ public class CloneGraph {
    }
 
 
-   // depthFirstSearch(Node root) {
+   // depthFirstSearch(Trie root) {
    //     visit(root);
    //     root.visited = true;
-   //     for (Node n : root.children) {
+   //     for (Trie n : root.children) {
    //         if (!n.visited)
    //           visit(n);
    //     }
    // }
    //
-   // bredthFirstSearch(Node root) {
+   // bredthFirstSearch(Trie root) {
    //     Queue q;
    //     visit(root);
    //     root.visited = true;
    //     q.enqueue(root);
    //     while (!q.isEmpty()) {
-   //         Node n = q.remove();
-   //         for (Node n : q.children()) {
+   //         Trie n = q.remove();
+   //         for (Trie n : q.children()) {
    //             if (!n.visited) {
    //                 visit(n);
    //                 q.enqueue(n);

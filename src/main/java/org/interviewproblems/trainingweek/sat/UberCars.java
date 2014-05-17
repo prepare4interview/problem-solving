@@ -16,7 +16,7 @@ public class UberCars {
 
       @Override
       public String toString() {
-         return "Node{" +
+         return "Trie{" +
                "id=" + id +
                ", visited=" + visited +
                ", dist=" + dist +

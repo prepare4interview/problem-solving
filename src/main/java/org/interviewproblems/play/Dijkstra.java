@@ -29,7 +29,7 @@ public class Dijkstra {
 
       @Override
       public String toString() {
-         return "Node{" +
+         return "Trie{" +
                "name='" + name + '\'' +
                '}';
       }

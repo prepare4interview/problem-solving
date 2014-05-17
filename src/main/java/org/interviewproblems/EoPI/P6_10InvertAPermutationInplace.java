@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Random;
 
 //P6.10
-public class InvertAPermutationInplace {
+public class P6_10InvertAPermutationInplace {
 
    public static void invert(int[] p) {
       if (p.length == 0) return;
